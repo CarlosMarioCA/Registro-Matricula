@@ -1,0 +1,14 @@
+{
+  "name": "entrega2",
+  "version": "1.0.0",
+  "description": "Entrega del proyecto individual Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Mario Chávez Aguilera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
