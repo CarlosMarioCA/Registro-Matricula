@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const hbs = require("hbs");
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 1394;
 require("./helpers");
 
 const directoriopublico = path.join(__dirname,"../public");
@@ -30,4 +31,4 @@ app.post("/mostrarestudiantes",(req,res)=>{res.render("mostrarestudiantes")});
 
 app.get("*",(req,res)=>{res.render("error")});
 
-app.listen(1394, () =>{console.log("Abierta la puerta al Digimundo.")});
+app.listen(port, () =>{console.log("Abierta la puerta al Digimundo." + port)});
