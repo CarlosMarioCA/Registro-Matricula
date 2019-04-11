@@ -28,6 +28,7 @@ app.post("/admin",(req,res)=>{
 		descripcion: req.body.descripcion,
 		modalidad: req.body.modalidad,
 		intensidad: parseInt(req.body.intensidad)
+	})
 });
 
 app.post("/mostrarcursos",(req,res)=>{res.render("mostrarcursos",{})});
@@ -40,4 +41,4 @@ app.post("/mostrarestudiantes",(req,res)=>{res.render("mostrarestudiantes")});
 
 app.get("*",(req,res)=>{res.render("error")});
 
-app.listen(port, () =>{console.log("Abierta la puerta al Digimundo." + port)})
+app.listen(port, () =>{console.log("Abierta la puerta al Digimundo." + port)});
