@@ -17,11 +17,20 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.set("view engine", "hbs");
 
-app.get("/",(req,res) => {res.render('index')});
+app.get("/",(req,res) => {res.render('index', {titulo:"Página de registro y Mátrícula"})});
 
-app.post("/admin",(req,res)=>{res.render("admin")});
+app.post("/admin",(req,res)=>{
+	res.render("admin",{
+		titulo:"Administración",
+		idcurso: parseInt(req.body.idcurso),
+		nombrecurso: parseInt(req.body.nombrecurso),
+		valorcurso: parseInt(req.body.valorcurso),
+		descripcion: req.body.descripcion,
+		modalidad: req.body.modalidad,
+		intensidad: parseInt(req.body.intensidad)
+});
 
-app.post("/mostrarcursos",(req,res)=>{res.render("mostrarcursos")});
+app.post("/mostrarcursos",(req,res)=>{res.render("mostrarcursos",{})});
 
 app.post("/mostrarcursos",(req,res)=>{res.render("mostrarcursos")});
 
@@ -31,4 +40,4 @@ app.post("/mostrarestudiantes",(req,res)=>{res.render("mostrarestudiantes")});
 
 app.get("*",(req,res)=>{res.render("error")});
 
-app.listen(port, () =>{console.log("Abierta la puerta al Digimundo." + port)});
+app.listen(port, () =>{console.log("Abierta la puerta al Digimundo." + port)})

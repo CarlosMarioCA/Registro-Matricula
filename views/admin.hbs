@@ -1,19 +1,19 @@
 {{>header}}
 
-<h3> Página para coordinar </h3>
+<h3 align="center"> Página para coordinar </h3>
 <h2> A continuación ingrese los datos del curso a crear. </h2>
 
 
-<p> Id del nuevo curso: </p>
-	<input type="number" name="idcurso">
+<p> Id del nuevo curso: <input type="number" name="idcurso" min="0"></p>
 
-<p> Nombre del curso a crear: </p>
-	<input type="text" name="nombrecurso">
+<p> Nombre del curso a crear <input type="text" name="nombrecurso"></p>
 
-<p> Valor de inscripción:  </p>
-	<input type="number" name="valorcurso">
+<p> Valor de inscripción: <input type="number" name="valorcurso" max="1000000" min="0"></p>
+	
+<p> Descripción del curso: <input type="text" name="descripcion"></p>
 
-<p> Descripción del curso:</p>
-	<input type="text" name="descripción">
+<p> Modalidad: <input type="radio" name="gender" value="presencial"> Presencial <input type="radio" name="gender" value="virtual"> Virtual </p>
+
+<p> Intensidad horaria: <input type="number" name="intensidad" min="0" max="200" > de 1 a 200. </p>
 
 {{>footer}}
